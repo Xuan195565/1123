@@ -96,6 +96,11 @@ startButton.addEventListener("click", startChallenge);
 endingScreen.addEventListener("click", backToStart);
 
 loadQuizButton.addEventListener("click", loadSelectedQuiz);
+quizSelect.addEventListener("change", () => {
+  if (quizSelect.value) {
+    loadSelectedQuiz();
+  }
+});
 
 async function loadSelectedQuiz() {
   const csvPath = quizSelect.value;
@@ -162,9 +167,9 @@ function getChallengeCount() {
 
 function startChallenge() {
   if (!allQuestions.length) {
-    showStartError("請先選擇 questions.csv");
-    return;
-  }
+   showStartError("請先選擇並載入題庫");
+   return;
+ }
 
   const count = getChallengeCount();
   const pool = RANDOM_QUESTION_ORDER ? shuffleArray(allQuestions) : [...allQuestions];
