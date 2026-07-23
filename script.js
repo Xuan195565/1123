@@ -53,7 +53,8 @@ const quizScreen = document.getElementById("quizScreen");
 const endingScreen = document.getElementById("endingScreen");
 const endingImage = document.getElementById("endingImage");
 
-const csvInput = document.getElementById("csvInput");
+const quizSelect = document.getElementById("quizSelect");
+const loadQuizButton = document.getElementById("loadQuizButton");
 const startButton = document.getElementById("startButton");
 const loadedInfo = document.getElementById("loadedInfo");
 const challengeCountInput = document.getElementById("challengeCountInput");
