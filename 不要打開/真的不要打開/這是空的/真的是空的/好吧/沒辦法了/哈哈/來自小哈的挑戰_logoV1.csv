@@ -1,0 +1,13 @@
+type,question,nameA,nameB,imageA,imageB,correct
+choice,哪一個才是真的?,圖片A,圖片B,logos/apple_real.png,logos/apple_fake.png,A
+choice,哪一個才是真的?,圖片A,圖片B,logos/bmw_fake.png,logos/bmw_real.png,B
+choice,哪一個才是真的?,圖片A,圖片B,logos/google_real.png,logos/google_fake.png,A
+choice,哪一個才是真的?,圖片A,圖片B,logos/coco_shop_fake.png,logos/coco_shop_real.png,B
+choice,哪一個才是真的?,圖片A,圖片B,logos/instagram_real.png,logos/instagram_fake.png,A
+choice,哪一個才是真的?,圖片A,圖片B,logos/louisa_fake.png,logos/louisa_real.png,B
+choice,哪一個才是真的?,圖片A,圖片B,logos/netflix_fake.png,logos/netflix_real.png,B
+choice,哪一個才是真的?,圖片A,圖片B,logos/nvidia_real.png,logos/nvidia_fake.png,A
+choice,哪一個才是真的?,圖片A,圖片B,logos/superman_fake.png,logos/superman_real.png,B
+choice,哪一個才是真的?,圖片A,圖片B,logos/yamaha_fake.png,logos/yamaha_real.png,B
+choice,哪一個才是真的?,圖片A,圖片B,logos/youtube_fake.png,logos/youtube_real.png,B
+choice,哪一個才是真的?,圖片A,圖片B,logos/amazon_fake.png,logos/amazon_real.png,B
