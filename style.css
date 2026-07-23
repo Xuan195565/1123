@@ -652,3 +652,29 @@ input[type="file"] {
   border-color: rgba(37, 99, 235, 0.72);
   box-shadow: 0 0 0 4px rgba(37, 99, 235, 0.14);
 }
+
+@media (max-width: 700px) {
+  .quiz-wrap {
+    padding: 36px 14px 24px;
+  }
+
+  .question-image-box {
+    width: 94vw;
+    height: 58vw;
+    min-height: 230px;
+    max-height: 360px;
+    margin: 12px auto 18px;
+    border-radius: 20px;
+    padding: 6px;
+  }
+
+  .question {
+    font-size: 28px;
+    margin: 14px 0 20px;
+  }
+
+  .input-answer-box {
+    width: 94vw;
+    padding: 18px;
+  }
+}
