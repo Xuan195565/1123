@@ -548,14 +548,15 @@ input[type="file"] {
 
 /* 題目圖片：questionImage 欄位有填才會顯示 */
 .question-image-box {
-  width: min(820px, 92vw);
-  height: min(460px, 52vw);
-  min-height: 340px;
+  width: min(760px, 82vw);
+  height: min(360px, 40vh);
+  min-height: 280px;
+  max-height: 360px;
 
-  margin: 18px auto 22px;
-  padding: 10px;
+  margin: 6px auto 8px;
+  padding: 8px;
 
-  border-radius: 26px;
+  border-radius: 24px;
   background: rgba(255, 255, 255, 0.82);
   border: 1px solid rgba(15, 23, 42, 0.08);
 
