@@ -95,31 +95,60 @@ document.getElementById("backButton").addEventListener("click", backToStart);
 startButton.addEventListener("click", startChallenge);
 endingScreen.addEventListener("click", backToStart);
 
-csvInput.addEventListener("change", (event) => {
-  const file = event.target.files[0];
-  if (!file) return;
+loadQuizButton.addEventListener("click", loadSelectedQuiz);
 
-  const reader = new FileReader();
+async function loadSelectedQuiz() {
+  const csvPath = quizSelect.value;
 
-  reader.onload = (loadEvent) => {
-    try {
-      const parsed = parseCSV(loadEvent.target.result);
+  if (!csvPath) {
+    showStartError("請先選擇一個題庫");
+    return;
+  }
 
-      if (!Array.isArray(parsed) || parsed.length === 0) {
-        throw new Error("CSV 裡面沒有有效題目");
-      }
+  loadQuizButton.disabled = true;
+  startButton.disabled = true;
+  loadedInfo.textContent = "題庫載入中……";
 
-      allQuestions = parsed;
-      startButton.disabled = false;
-      loadedInfo.innerHTML = `已載入 <strong>${allQuestions.length}</strong> 題。請輸入本次想挑戰的題數。`;
-      removeStartError();
-    } catch (error) {
-      showStartError(error.message);
+  removeStartError();
+
+  try {
+    const response = await fetch(encodeURI(csvPath), {
+      cache: "no-store"
+    });
+
+    if (!response.ok) {
+      throw new Error(
+        `題庫下載失敗，HTTP 狀態：${response.status}`
+      );
     }
-  };
 
-  reader.readAsText(file, "UTF-8");
-});
+    const csvText = await response.text();
+    const parsed = parseCSV(csvText);
+
+    if (!Array.isArray(parsed) || parsed.length === 0) {
+      throw new Error("CSV 裡面沒有可使用的題目");
+    }
+
+    allQuestions = parsed;
+
+    loadedInfo.textContent =
+      `已載入 ${allQuestions.length} 題，請設定挑戰題數。`;
+
+    startButton.disabled = false;
+  } catch (error) {
+    console.error("載入題庫失敗：", error);
+
+    allQuestions = [];
+    startButton.disabled = true;
+    loadedInfo.textContent = "題庫載入失敗。";
+
+    showStartError(
+      `無法載入題庫：${error.message}。請確認 GitHub 上的路徑和檔名。`
+    );
+  } finally {
+    loadQuizButton.disabled = false;
+  }
+}
 
 function getChallengeCount() {
   const requested = Number(challengeCountInput ? challengeCountInput.value : CHALLENGE_COUNT);
