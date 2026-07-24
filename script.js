@@ -5,39 +5,39 @@ const RANDOM_AB_POSITION = true;
 
 const CORRECT_MESSAGES = [
   "答對！(≧▽≦)",
-  "小哈覺得你很棒！",
+  "你太棒啦！",
   "太神啦！ヽ(✿ﾟ▽ﾟ)ノ",
   "答對了耶！",
   "這題難不倒你！",
-  "小哈給你一個讚！",
+  "給你一個讚！",
   "完全正確！",
-  "觀察力很不錯喔！",
+  "很不錯喔！",
   "好強！",
   "你是不是偷看答案了？",
-  "小哈開始崇拜你了！"
+  "要開始崇拜你了！"
 ];
 
 const WRONG_MESSAGES = [
   "答錯！(´･ω･)",
-  "小哈搖頭中...",
+  "搖頭中...",
   "再仔細看看吧！",
   "這題有點可惜",
   "差一點點！",
-  "小哈覺得你被套路了",
+  "你被套路了",
   "這題很多人都會錯",
   "再挑戰一次！",
   "別灰心，下一題加油！",
-  "小哈露出疑惑的表情?"
+  "露出疑惑的表情?"
 ];
 
 
 const ENDING_RANGES = [
-  { min: 0, max: 4, image: "ending/ending_0_2.png", title: "迷路了哈?", message: "小哈：你是不是在亂猜？" },
-  { min: 5, max: 8, image: "ending/ending_3_4.png", title: "見習挑戰者", message: "小哈：好像有認真看……但不多。" },
-  { min: 9, max: 12, image: "ending/ending_5_6.png", title: "合格的挑戰者", message: "小哈：已經有及格了！" },
-  { min: 13, max: 16, image: "ending/ending_7_8.png", title: "挑戰達人", message: "小哈：你很厲害耶！" },
-  { min: 17, max: 19, image: "ending/ending_9.png", title: "傳說級挑戰者", message: "小哈：只差一點就滿分！" },
-  { min: 20, max: 20, image: "ending/ending_10.png", title: "小哈認證的大師", message: "小哈：太誇張了吧！全部答對！" }
+  { min: 0, max: 4, image: "ending/ending_0_2.png", title: "迷路了蛤?", message: "：你是不是在亂猜？" },
+  { min: 5, max: 8, image: "ending/ending_3_4.png", title: "見習挑戰者", message: "：好像有認真看……但不多。" },
+  { min: 9, max: 12, image: "ending/ending_5_6.png", title: "合格的挑戰者", message: "：已經有及格了！" },
+  { min: 13, max: 16, image: "ending/ending_7_8.png", title: "挑戰達人", message: "：你很厲害耶！" },
+  { min: 17, max: 19, image: "ending/ending_9.png", title: "傳說級挑戰者", message: "：只差一點就滿分！" },
+  { min: 20, max: 20, image: "ending/ending_10.png", title: "超級大師", message: "：太誇張了吧！全部答對！" }
 ];
 
 let allQuestions = [];
